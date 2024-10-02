@@ -1,0 +1,46 @@
+.profile-section {
+    background: orange;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 100px; /* Profile picture size */
+    height: 100px; /* Profile picture size */
+    object-fit: cover;
+}
+
+.profile-pic input[type="file"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0; /* Hide file input */
+    width: 30px; /* Small size for file input */
+    height: 30px; /* Small size for file input */
+    cursor: pointer;
+}
+
+.profile-details {
+    flex-grow: 1; /* Allow this div to take available space */
+}
+
+.profile-details h3 {
+    margin: 0;
+}
+
+.profile-details p {
+    margin: 5px 0 15px 0;
+}

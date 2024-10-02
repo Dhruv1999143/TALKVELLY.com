@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<link rel="stylesheet"
+ href="create account page .css"
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Email Verification</h2>
+        <p>Enter the 6-digit OTP sent to your email address to verify your account.</p>
+        <form action="/verify-otp" method="post">
+            <label for="otp">OTP Code</label>
+            <input type="text" id="otp" name="otp" placeholder="000000" maxlength="6" required>
+
+            <button type="submit">Verify OTP</button>
+
+            <div class="link">
+                <p>Didn't receive the OTP? <a href="#">Resend OTP</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

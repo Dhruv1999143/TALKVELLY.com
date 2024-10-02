@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="massage.css"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h2>Messages</h2>
+
+            <div class="messages-container">
+                <!-- Message List -->
+                <div class="message-list">
+                    <h3>Your Conversations</h3>
+                    <ul>
+                        <li class="message-item">
+                            <a href="#" onclick="openChat('chat1')">
+                                <img src="user1.png" alt="User 1">
+                                <div class="message-details">
+                                    <h4>John Doe</h4>
+                                    <p>Last message...</p>
+                                </div>
+                            </a><br>
+                        </li>
+                        <li class="message-item">
+                            <a href="#" onclick="openChat('chat2')">
+                                <img src="user2.png" alt="User 2">
+                                <div class="message-details"><br>
+                                    <h4>Jane Smith</h4>
+                                    <p>Last message...</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chat Window -->
+                <div class="chat-window" id="chat1" style="display: none;">
+                    <h3>Conversation with John Doe</h3>
+                    <div class="chat-messages">
+                        <div class="message">
+                            <span class="sender">You:</span>
+                            <p>Hello, how are you?</p>
+                        </div>
+                        <div class="message">
+                            <span class="sender">John:</span>
+                            <p>I'm good, thanks! What about you?</p>
+                        </div>
+                    </div>
+
+                    <form class="message-form">
+                        <input type="text" placeholder="Type a message..." class="message-input">
+                        <button type="submit" class="send-button">Send</button>
+                    </form>
+                </div>
+
+                <div class="chat-window" id="chat2" style="display: none;">
+                    <h3>Conversation with Jane Smith</h3>
+                    <div class="chat-messages">
+                        <div class="message">
+                            <span class="sender">You:</span>
+                            <p>Hi Jane!</p>
+                        </div>
+                        <div class="message">
+                            <span class="sender">Jane:</span>
+                            <p>Hello! What's up?</p>
+                        </div>
+                    </div>
+
+                    <form class="message-form">
+                        <input type="text" placeholder="Type a message..." class="message-input">
+                        <button type="submit" class="send-button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <aside class="side-menu">
+            <nav>
+                <ul>
+                    <li><a href="halp.html">Contact Support</a></li>
+                    <li><a href="login page .html">logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyApp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openChat(chatId) {
+            // Hide all chat windows
+            var chats = document.getElementsByClassName('chat-window');
+            for (var i = 0; i < chats.length; i++) {
+                chats[i].style.display = 'none';
+            }
+
+            // Show the selected chat window
+            document.getElementById(chatId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

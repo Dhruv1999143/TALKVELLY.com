@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="findjob .js" defer></script>
+<link rel="stylesheet" href="job find .css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Find</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+        <main class="main-content">
+            <h2>Find a Job</h2>
+            <form class="job-search-bar" 
+            action="search_jobs.php" method="GET"><br>
+                <input type="text" name="job_title" placeholder="Job Title or Keyword" class="search-input" required>
+                <input type="text" name="location" placeholder="Location" class="search-input">
+                <button type="submit" class="search-button">Search Jobs</button>
+            </form>
+
+            <section class="job-listings">
+                <h3>Recent Job Listings</h3>
+                <div class="job">
+                    <h4>STORES</h4>
+   <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+                <div class="job">
+                    <h4>MOTELS</h4>
+                
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+                <div class="job">
+                    <h4>ALL RESTARUNT</h4>
+                    
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </section>
+        </main>
+
+        <aside class="side-menu">
+            <nav>
+                <ul>
+                    <li><a href="#contact-support">Contact Support</a></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TalkVelly. All rights reserved.</p>
+    </footer>
+</body>
+</html>

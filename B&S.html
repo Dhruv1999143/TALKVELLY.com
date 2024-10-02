@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="b&s.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARKETPLACE</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assume CSS file is linked here -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>MARKETPLACE</h1>
+        </div>
+    </header>
+
+    <!-- Search Bar Section -->
+    <div class="container search-bar">
+        <input type="text" id="search-input" placeholder="Search for stores, motels, or restaurants...">
+        <button type="button" id="search-button">Search</button>
+    </div>
+
+    <!-- Listing Section -->
+    <div class="container">
+        <h1>Listings</h1>
+        <div class="section" id="listing-section">
+            <div class="card">
+                <img src="store.jpg" alt="Store 1">
+                <div class="card-body">
+                    <h2 class="card-title">Store 1</h2>
+                    <p class="card-description">High-traffic area, fully equipped.</p>
+                    <a href="#" class="buy-button">Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="motel.jpg" alt="Motel 1">
+                <div class="card-body">
+                    <h2 class="card-title">Motel 1</h2>
+                    <p class="card-description">Affordable, near main highway.</p>
+                    <a href="#" class="buy-button">Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="restaurant.jpg" alt="Restaurant 1">
+                <div class="card-body">
+                    <h2 class="card-title">Restaurant 1</h2>
+                    <p class="card-description">Well-known, great location.</p>
+                    <a href="#" class="buy-button">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Listing Form -->
+    <div class="container">
+        <h1>Post a Listing</h1>
+        <div class="form-container">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Listing Title" required><br>
+                <textarea name="description" placeholder="Description" rows="5" required></textarea><br>
+                <input type="file" name="image" accept="image/*" required><br>
+                <select name="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="store">Store</option>
+                    <option value="motel">Motel</option>
+                    <option value="restaurant">Restaurant</option>
+                </select><br>
+                <input type="submit" value="Post Listing">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Buy & Sell Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple Search Functionality (for demo purposes)
+        document.getElementById('search-button').addEventListener('click', function() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const listings = document.querySelectorAll('.card');
+
+            listings.forEach(function(listing) {
+                const title = listing.querySelector('.card-title').innerText.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    listing.style.display = '';
+                } else {
+                    listing.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

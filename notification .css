@@ -1,0 +1,47 @@
+/* Notification bar styles */
+.notification {
+  background-color: orange; /* orange background color */
+  color: orange; /* Text color */
+  padding: 15px; /* Padding around the notification text */
+  text-align: center; /* Center the notification text */
+  position: fixed; /* Fixed position on the page */
+  top: 0; /* Align the notification to the top */
+  left: 0; /* Align to the left of the page */
+  width: 100%; /* Full width of the page */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  transition: top 0.3s ease-in-out; /* Smooth slide-down effect */
+}
+
+/* Notification close button styles */
+.close-btn {
+  position: absolute; /* Absolute position within the notification bar */
+  right: 10px; /* Position 10px from the right edge */
+  top: 50%; /* Vertically center the button */
+  transform: translateY(-50%); /* Adjust for perfect vertical alignment */
+  background-color: #333; /* Dark background for the button */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 5px 10px; /* Padding for button size */
+  cursor: pointer; /* Pointer cursor for interaction */
+  font-size: 16px; /* Button text size */
+  border-radius: 4px; /* Rounded button corners */
+  transition: background-color 0.2s ease; /* Smooth background color change */
+}
+
+.close-btn:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Main content padding to avoid overlap with notification */
+main {
+  padding: 20px;
+  margin-top: 60px; /* Ensure content starts below the notification */
+}
+
+/* Optional: Style when the notification is hidden */
+.notification.hide {
+  top: -100px; /* Slide the notification out of view */
+  opacity: 0; /* Fade out */
+  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+}

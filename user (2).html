@@ -1,0 +1,33 @@
+<link rel="stylesheet"
+href="user.css"
+>
+<main class="main-content">
+    <section class="profile-section">
+        <h2>Your Profile</h2>
+        <div class="profile-info">
+            <div class="profile-pic">
+                <img src="default-profile.jpg" alt="User Profile Picture" id="profile-img">
+                <input type="file" id="profile-upload" accept="image/*" onchange="previewImage(event)">
+            </div>
+            <div class="profile-details">
+                <h3>Username</h3>
+                <p>Your bio goes here. Update your information!</p>
+                <button>Edit Profile</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="post-form">
+        <h2>Create a Post</h2>
+        <form action="post.php" method="POST">
+            <textarea placeholder="What's on your mind?" required></textarea>
+            <input type="file" accept="image/*">
+            <button type="submit">Post</button>
+        </form>
+    </section>
+
+    <section class="feed">
+        <h2>Feed</h2>
+        <!-- Feed content goes here -->
+    </section>
+</main>

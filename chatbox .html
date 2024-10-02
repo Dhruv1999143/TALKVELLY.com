@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="chatbox .css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalkVelly<br> assistance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <h3><b>TalkVelly<b><br><b>assistance<b></h3>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+      <div class="message left">
+        <p>Hello! How can I help you?</p>
+      </div>
+      <div class="message right">
+        <p>I need assistance with my account.</p>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('send-btn').addEventListener('click', function() {
+      const input = document.getElementById('chat-input');
+      const message = input.value.trim();
+      
+      if (message !== "") {
+        const chatBox = document.getElementById('chat-box');
+        const newMessage = document.createElement('div');
+        newMessage.classList.add('message', 'right');
+        newMessage.innerHTML = `<p>${message}</p>`;
+        chatBox.appendChild(newMessage);
+        input.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="setting .css"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+        <main class="main-content">
+            <h2>Settings</h2>
+            <form action="update-settings.php" method="POST">
+                <!-- Profile Management -->
+                <section class="settings-section">
+                    <h3>Profile Management</h3>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" placeholder="Write a short bio..."></textarea>
+
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                </section>
+
+                <!-- Account Security -->
+                <section class="settings-section">
+                    <h3>Account Security</h3>
+                    <label for="current-password">Current Password:</label>
+                    <input type="password" id="current-password" name="current-password" required>
+
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password" name="new-password">
+
+                    <label for="confirm-password">Confirm New Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                </section>
+
+                <!-- Privacy Settings -->
+                <section class="settings-section">
+                    <h3>Privacy Settings</h3>
+                    <label for="profile-visibility">Profile Visibility:</label>
+                    <select id="profile-visibility" name="profile-visibility">
+                        <option value="public">Public</option>
+                        <option value="friends">Friends Only</option>
+                        <option value="private">Private</option>
+                    </select>
+
+                    <label for="post-visibility">Default Post Visibility:</label>
+                    <select id="post-visibility" name="post-visibility">
+                        <option value="public">Public</option>
+                        <option value="friends">Friends Only</option>
+                        <option value="private">Private</option>
+                    </select>
+                </section>
+
+                <!-- Notification Preferences -->
+                <section class="settings-section">
+                    <h3>Notification Preferences</h3>
+                    <label>
+                        <input type="checkbox" name="email-notifications" checked>
+                        Receive email notifications
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="push-notifications" checked>
+                        Enable push notifications
+                    </label>
+                </section>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </main>
+
+        <aside class="side-menu">
+            <nav>
+                <ul>
+                    <li><a href="halp.html">Help</a></li>
+                    <li><a href="login page .html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyApp. All rights reserved.</p>
+    </footer>
+</body>
+</html>
